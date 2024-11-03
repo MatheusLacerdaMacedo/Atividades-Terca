@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Idade</title>
+</head>
+
+<body>
+    <script>
+        function calcularIdade(anoNascimento, anoAtual) {
+            const idadeAtual = anoAtual - anoNascimento;
+            const idade2050 = 2050 - anoNascimento;
+
+            console.log(`A pessoa tem ${idadeAtual} anos no ano atual (${anoAtual}).`);
+            console.log(`A pessoa terá ${idade2050} anos em 2050.`);
+        }
+
+        const anoNascimento = 1990; 
+        const anoAtual = new Date().getFullYear(); 
+
+        calcularIdade(anoNascimento, anoAtual);
+
+    </script>
+</body>
+
+</html>

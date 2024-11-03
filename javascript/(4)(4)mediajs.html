@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Salario</title>
+</head>
+
+<body>
+    <script>
+
+        function calcularMedia(nota1, nota2, nota3) {
+            const media = (nota1 + nota2 + nota3) / 3;
+
+            console.log(`A média aritmética das notas é: ${media.toFixed(2)}`);
+        }
+
+        const nota1 = parseFloat(prompt("Digite a primeira nota:"));
+        const nota2 = parseFloat(prompt("Digite a segunda nota:"));
+        const nota3 = parseFloat(prompt("Digite a terceira nota:"));
+
+        if (!isNaN(nota1) && !isNaN(nota2) && !isNaN(nota3)) {
+            calcularMedia(nota1, nota2, nota3);
+        } else {
+            console.log("Por favor, digite valores válidos para as notas.");
+        }
+
+    </script>
+</body>
+
+</html>

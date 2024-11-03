@@ -1,0 +1,80 @@
+html {
+    font-size: 62.5%;
+    background-color: rgb(182, 181, 184);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    margin: 0px 20px ;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.274);
+    border-radius: 7px;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 0px 20px;
+    transition: .2s;
+}
+
+a:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    
+}
+
+h2{
+    color: rgb(0, 0, 0);
+}
+
+#home-p {
+    color: rgb(0, 0, 0);
+}
+
+.section-primary-bg h2 {
+    text-align: center;
+}
+
+.section-primary-bg p {
+    text-align: center;
+}
+
+#img1 {
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.Presenting-ucs {
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.274);
+    color: rgb(0, 0, 0);
+    padding: 1px;
+    border-radius: 7px;
+}
+
+.Presenting-ucs p {
+    text-align: center;
+}
+
+.Presenting-ucs li{
+    margin: 10px 0px;
+    list-style: none;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Veículos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #444;
+        }
+        div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #listaVeiculos {
+            list-style-type: none;
+            padding: 0;
+            max-width: 400px;
+        }
+        #listaVeiculos li {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Veículos</h1>
+    <div>
+        <label for="chassi">Número do Chassi:</label>
+        <input type="text" id="chassi" required>
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa" required>
+        <button onclick="cadastrarVeiculo()">Cadastrar Veículo</button>
+    </div>
+
+    <h2>Veículos Cadastrados:</h2>
+    <ul id="listaVeiculos"></ul>
+
+    <script>
+        class Veiculo {
+            constructor(chassi, placa) {
+                this._chassi = chassi;
+                this._placa = placa;
+            }
+
+            get chassi() {
+                return this._chassi;
+            }
+
+            get placa() {
+                return this._placa;
+            }
+        }
+
+        const veiculos = [];
+
+        function cadastrarVeiculo() {
+            const chassiInput = document.getElementById('chassi');
+            const placaInput = document.getElementById('placa');
+            const chassi = chassiInput.value;
+            const placa = placaInput.value;
+
+            const veiculo = new Veiculo(chassi, placa);
+            veiculos.push(veiculo);
+
+            atualizarListaVeiculos();
+
+            chassiInput.value = '';
+            placaInput.value = '';
+        }
+
+        function atualizarListaVeiculos() {
+            const listaVeiculos = document.getElementById('listaVeiculos');
+            listaVeiculos.innerHTML = '';
+
+            veiculos.forEach(veiculo => {
+                const li = document.createElement('li');
+                li.textContent = `Chassi: ${veiculo.chassi}, Placa: ${veiculo.placa}`;
+                listaVeiculos.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

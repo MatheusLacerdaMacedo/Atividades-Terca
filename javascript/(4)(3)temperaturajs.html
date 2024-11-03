@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Salario</title>
+</head>
+
+<body>
+    <script>
+        function converterParaFahrenheit(celsius) {
+            
+            const fahrenheit = (celsius * 1.8) + 32;
+
+            console.log(`A temperatura em Fahrenheit é: ${fahrenheit.toFixed(2)}°F`);
+        }
+
+        const celsius = parseFloat(prompt("Digite a temperatura em Celsius:"));
+
+        if (!isNaN(celsius)) {
+            converterParaFahrenheit(celsius);
+        } else {
+            console.log("Por favor, digite um valor válido para a temperatura.");
+        }
+
+    </script>
+</body>
+
+</html>

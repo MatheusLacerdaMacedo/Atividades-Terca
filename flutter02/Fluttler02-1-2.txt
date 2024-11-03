@@ -1,0 +1,56 @@
+class Cliente {
+  String nome;
+  String email;
+  String telefone;
+  String endereco;
+
+  Cliente(this.nome, this.email, this.telefone, this.endereco);
+
+  // Método para exibir os dados do cliente
+  void exibirDados() {
+    print('Nome: $nome');
+    print('Email: $email');
+    print('Telefone: $telefone');
+    print('Endereço: $endereco');
+  }
+}
+
+class Produto {
+  String nome;
+  double preco;
+  String descricao;
+
+  Produto(this.nome, this.preco, this.descricao);
+
+  // Método para exibir os dados do produto
+  void exibirDados() {
+    print('Produto: $nome');
+    print('Preço: R\$ $preco');
+    print('Descrição: $descricao');
+  }
+}
+
+void main() {
+  // Criando uma instância da classe Cliente
+  Cliente cliente1 = Cliente(
+    'João Silva',
+    'joao.silva@email.com',
+    '1234-5678',
+    'Rua das Flores, 123',
+  );
+
+  // Criando uma instância da classe Produto
+  Produto produto1 = Produto(
+    'Camiseta',
+    49.99,
+    'Camiseta 100% algodão, confortável e durável.',
+  );
+
+  // Exibindo os dados do cliente
+  print('Dados do Cliente:');
+  cliente1.exibirDados();
+
+  // Exibindo os dados do produto
+  print('\nDados do Produto:');
+  produto1.exibirDados();
+}

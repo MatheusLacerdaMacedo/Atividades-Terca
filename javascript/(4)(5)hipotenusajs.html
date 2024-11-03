@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Salario</title>
+</head>
+
+<body>
+    <script>
+        function calcularHipotenusa(cateto1, cateto2) {
+            const hipotenusa = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
+
+            console.log(`O valor da hipotenusa é: ${hipotenusa.toFixed(2)}`);
+        }
+
+        const cateto1 = parseFloat(prompt("Digite o valor do primeiro cateto:"));
+        const cateto2 = parseFloat(prompt("Digite o valor do segundo cateto:"));
+
+        if (!isNaN(cateto1) && !isNaN(cateto2) && cateto1 > 0 && cateto2 > 0) {
+            calcularHipotenusa(cateto1, cateto2);
+        } else {
+            console.log("Por favor, digite valores válidos para os catetos.");
+        }
+
+    </script>
+</body>
+
+</html>

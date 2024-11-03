@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(
+      MaterialApp(
+        home: Home(),
+        debugShowCheckedModeBanner: false,
+      ),
+    );
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: const Icon(Icons.home),
+        title: const Text('Página Inicial'),
+      ),
+      body: Center(
+        child: Container(
+          width: 400, // Tamanho do círculo
+          height: 400,
+          decoration: BoxDecoration(
+            color: Colors.yellow, // Cor do círculo
+            shape: BoxShape.circle,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: const Offset(0, 3),
+              ),
+            ],
+          ),
+          child: Center(
+            child: Container(
+              width: 200, // Tamanho da imagem quadrada
+              height: 300,
+              decoration: BoxDecoration(
+                borderRadius:
+                    BorderRadius.circular(10), // Borda levemente arredondada
+                image: DecorationImage(
+                  image: NetworkImage(
+                    'https://static-cse.canva.com/blob/759728/ComoTirareEditarSuaFotoparaPerfilemRedesSociaisfeaturedimagee1559023010630.994bef93.jpg',
+                  ),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Salario</title>
+</head>
+
+<body>
+    <script>
+        function calcularEsfera(raio) {
+            const pi = Math.PI;
+
+            const comprimento = 2 * pi * raio;
+
+            const area = pi * Math.pow(raio, 2);
+
+            const volume = (4 / 3) * pi * Math.pow(raio, 3);
+
+            console.log(`O comprimento da esfera é: ${comprimento.toFixed(2)}`);
+            console.log(`A área da esfera é: ${area.toFixed(2)}`);
+            console.log(`O volume da esfera é: ${volume.toFixed(2)}`);
+        }
+
+        const raio = parseFloat(prompt("Digite o valor do raio da esfera:"));
+
+        if (!isNaN(raio) && raio > 0) {
+            calcularEsfera(raio);
+        } else {
+            console.log("Por favor, digite um valor válido para o raio.");
+        }
+
+    </script>
+</body>
+
+</html>
